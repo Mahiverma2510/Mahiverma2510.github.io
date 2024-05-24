@@ -4,23 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        h1 { color: #333; }
-        .project { margin-bottom: 20px; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: #222;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .project, .contact {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: fadeIn 2s;
+        }
+        .project h2, .contact h2 {
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <h1>My Portfolio</h1>
-    <p>Hello! I'm [Your Name], a [Your Profession]. Welcome to my portfolio!</p>
-    <div class="project">
-        <h2>Project 1</h2>
-        <p>Description of project 1.</p>
-    </div>
-    <div class="project">
-        <h2>Project 2</h2>
-        <p>Description of project 2.</p>
-    </div>
-    <!-- Add more projects as needed -->
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <p>Hello! I'm [Your Name], a [Your Profession]. Welcome to my portfolio!</p>
+        </div>
+    </header>
+    <section id="projects" class="container">
+        <div class="project">
+            <h2>Project 1</h2>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h2>Project 2</h2>
+            <p>Description of project 2.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    <section id="contact" class="container contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
+
